@@ -1,0 +1,6 @@
+# NT_sabados1_LifeBalance
+Proyecto integrador nuevas tecnologias
+
+Prompo para consumo y transformacion:
+
+Asume el rol de experto en analitica de datos con python, para el siguiente dataset " usuario = { "id": random.randint(20000000, 1500000000), "nombre": random.choice(listaNombres), "correo": random.choice(listaCorreos), "contrasena": random.choice(listaPass), "sexo": random.choice(listaSexo), "fecha_creacion": fechaSimulada.strftime("%Y/%m/%d") }" necesito una rutina que tenga el siguiente formato exacto "import pandas as pd def transformar_datos(data_frame_limpio): filtro=data_frame_limpio.query("servicio=='esterilizacion'") agrupacion=filtro.groupby("fecha")["id"].count().reset_index(name="conteo") filtro2=data_frame_limpio.query("costo>=250000") agrupacion2=filtro2.groupby("servicio")["costo"].sum().reset_index(name="sumatoria") transformacion_resumen={ "conteoEsterilizacionesPorFecha":agrupacion, "sumatoriaCostosServiciosAltoCosto":agrupacion2 } return transformacion_resumen" filtro y agrupacion necesarias, para generar graficas con matplotlib. Necesito 5 filtros y su respectiva agrupacion escoge las columnas por mi y entregame el codigo, genera opciones para graficar barras, lineas, tortas o mapas de calor

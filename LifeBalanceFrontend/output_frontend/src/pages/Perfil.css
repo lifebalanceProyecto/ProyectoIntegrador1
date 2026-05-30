@@ -1,0 +1,23 @@
+.perfil-page { padding: 28px 32px; max-width: 640px; margin: 0 auto; display: flex; flex-direction: column; gap: 18px; }
+.perfil-hero { display: flex; flex-direction: column; align-items: center; gap: 7px; padding: 28px 22px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-2xl); text-align: center; box-shadow: var(--shadow-sm); }
+.perfil-avatar-lg { width: 68px; height: 68px; border-radius: 50%; background: linear-gradient(135deg, var(--sage), #156636); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; font-weight: 700; color: #fff; margin-bottom: 3px; }
+.perfil-nombre { font-size: 1.75rem; font-weight: 300; color: var(--text); }
+.perfil-correo { font-size: 0.83rem; color: var(--muted); }
+.perfil-member { font-size: 0.73rem; color: var(--dim); background: var(--s2); padding: 4px 12px; border-radius: 99px; border: 1px solid var(--border); }
+.perfil-stats { display: grid; grid-template-columns: repeat(4,1fr); gap: 11px; }
+.perfil-stat  { display: flex; flex-direction: column; align-items: center; gap: 3px; padding: 14px 8px; }
+.ps-val { font-size: 1.6rem; font-weight: 300; color: var(--sage); line-height: 1; }
+.ps-lbl { font-size: 0.66rem; color: var(--muted); text-align: center; }
+.perfil-info-card { padding: 18px; }
+.info-row       { display: flex; justify-content: space-between; align-items: center; padding: 9px 0; border-bottom: 1px solid var(--border); font-size: 0.83rem; }
+.info-row:last-child { border-bottom: none; }
+.info-label { color: var(--muted); }
+.info-value { color: var(--text); font-weight: 600; }
+.perfil-menu { display: flex; flex-direction: column; padding: 5px; gap: 1px; }
+.menu-item   { display: flex; align-items: center; gap: 11px; padding: 12px 12px; border-radius: var(--r-md); background: none; border: none; text-decoration: none; cursor: pointer; transition: background var(--t-fast); font-family: 'Outfit', sans-serif; width: 100%; }
+.menu-item:hover { background: var(--s2); }
+.mi-icon  { font-size: 1.05rem; flex-shrink: 0; }
+.mi-label { flex: 1; font-size: 0.86rem; color: var(--text); text-align: left; }
+.mi-arrow { font-size: 1.05rem; color: var(--dim); }
+.menu-item.danger .mi-label { color: var(--rose); }
+@media (max-width: 600px) { .perfil-page { padding: 16px; } .perfil-stats { grid-template-columns: repeat(2,1fr); } }

@@ -1,0 +1,281 @@
+/* ══════════════════════════════════════════════════
+   Admin.css — Panel de Administrador
+══════════════════════════════════════════════════ */
+
+.admin-page {
+  padding: 2rem;
+  max-width: 1200px;
+}
+
+/* ── Header ───────────────────────────────────── */
+.admin-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.admin-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--violet-dim);
+  color: var(--violet);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+/* ── Tabs ─────────────────────────────────────── */
+.admin-tabs {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0;
+}
+.admin-tab {
+  padding: 8px 18px;
+  border: none;
+  background: transparent;
+  color: var(--text-2);
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  transition: color .2s, border-color .2s;
+}
+.admin-tab:hover { color: var(--text-1); }
+.admin-tab.active {
+  color: var(--violet);
+  border-bottom-color: var(--violet);
+}
+
+/* ── Stats row ───────────────────────────────── */
+.admin-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.admin-stat-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.1rem 1.25rem;
+}
+.admin-stat-val {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--text-1);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.admin-stat-lbl {
+  font-size: 0.78rem;
+  color: var(--text-2);
+}
+
+/* ── Table ───────────────────────────────────── */
+.admin-table-wrap {
+  overflow-x: auto;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+}
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+.admin-table th {
+  padding: 10px 14px;
+  text-align: left;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-2);
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg);
+}
+.admin-table td {
+  padding: 10px 14px;
+  color: var(--text-1);
+  border-bottom: 1px solid var(--border);
+  vertical-align: middle;
+}
+.admin-table tr:last-child td { border-bottom: none; }
+.admin-table tr:hover td { background: var(--surface-2, var(--bg)); }
+
+/* ── Rol badge ───────────────────────────────── */
+.rol-badge {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 20px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+.rol-badge.admin { background: var(--violet-dim); color: var(--violet); }
+.rol-badge.usuario { background: var(--sage-dim); color: var(--sage, #5a8a72); }
+
+/* ── Action buttons ─────────────────────────── */
+.admin-btn {
+  border: none;
+  border-radius: 6px;
+  padding: 5px 11px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity .2s;
+}
+.admin-btn:hover { opacity: .8; }
+.admin-btn-primary { background: var(--violet-dim); color: var(--violet); }
+.admin-btn-danger  { background: #fce4e4; color: #c0392b; }
+.admin-btn-neutral { background: var(--border); color: var(--text-2); }
+
+/* ── Modal overlay ───────────────────────────── */
+.admin-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.45);
+  backdrop-filter: blur(3px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+}
+.admin-modal {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 2rem;
+  width: min(520px, 94vw);
+  max-height: 90vh;
+  overflow-y: auto;
+}
+.admin-modal h3 {
+  margin: 0 0 1.2rem;
+  font-size: 1.1rem;
+  color: var(--text-1);
+}
+
+/* ── Form ────────────────────────────────────── */
+.admin-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.admin-form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.admin-form-field.full { grid-column: 1/-1; }
+.admin-form-field label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-2);
+}
+.admin-form-field input,
+.admin-form-field select {
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg);
+  color: var(--text-1);
+  font-size: 0.875rem;
+}
+.admin-form-field input:focus,
+.admin-form-field select:focus {
+  outline: none;
+  border-color: var(--violet);
+}
+.admin-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 1.4rem;
+}
+
+/* ── Seguimiento table extras ────────────────── */
+.seg-user-chip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.seg-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--violet-dim);
+  color: var(--violet);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.78rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+/* ── Recomendaciones ─────────────────────────── */
+.rec-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 1.5rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.2rem;
+}
+.rec-form h4 {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--text-1);
+}
+.rec-form-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.rec-form-row select,
+.rec-form-row input {
+  padding: 7px 10px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg);
+  color: var(--text-1);
+  font-size: 0.85rem;
+}
+.rec-form-row textarea {
+  flex: 1;
+  padding: 7px 10px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg);
+  color: var(--text-1);
+  font-size: 0.85rem;
+  resize: vertical;
+  min-height: 60px;
+}
+
+/* ── Loading ─────────────────────────────────── */
+.admin-loading {
+  padding: 3rem;
+  text-align: center;
+  color: var(--text-2);
+}
+
+/* ── Empty ───────────────────────────────────── */
+.admin-empty {
+  padding: 2.5rem;
+  text-align: center;
+  color: var(--text-2);
+  font-size: 0.9rem;
+}

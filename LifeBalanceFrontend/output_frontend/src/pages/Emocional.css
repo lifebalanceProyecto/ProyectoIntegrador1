@@ -1,0 +1,38 @@
+.emocional-page { padding: 28px 32px; max-width: 1200px; margin: 0 auto; }
+.em-layout { display: grid; grid-template-columns: 1fr 1.2fr; gap: 18px; }
+.em-col-left, .em-col-right { display: flex; flex-direction: column; gap: 18px; }
+.already-badge { background: var(--sage-dim); color: var(--sage); border: 1px solid rgba(30,138,74,0.2); padding: 3px 10px; border-radius: 99px; font-size: 0.7rem; }
+.em-mood-opts { display: flex; gap: 5px; }
+.em-mood-btn  { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 3px; padding: 9px 4px; background: var(--s2); border: 1.5px solid transparent; border-radius: var(--r-md); cursor: pointer; transition: all var(--t-base); }
+.em-mood-btn:hover   { background: var(--s3); border-color: var(--border-lt); }
+.em-mood-btn.selected { background: var(--sage-dim); border-color: var(--sage); }
+.em-emoji { font-size: 1.4rem; }
+.em-label { font-size: 0.59rem; color: var(--muted); text-align: center; }
+.em-num   { font-size: 0.6rem; color: var(--dim); }
+.em-slider-wrap { display: flex; flex-direction: column; gap: 5px; }
+.em-slider { -webkit-appearance: none; width: 100%; height: 4px; border-radius: 2px; background: var(--s3); outline: none; cursor: pointer; }
+.em-slider::-webkit-slider-thumb { -webkit-appearance: none; width: 17px; height: 17px; border-radius: 50%; background: var(--sage); border: 2px solid var(--surface); box-shadow: 0 0 6px var(--sage-glow); }
+.em-slider-labels { display: flex; justify-content: space-between; font-size: 0.61rem; }
+.em-textarea  { resize: vertical; min-height: 75px; }
+.em-date      { font-size: 0.75rem; color: var(--muted); text-transform: capitalize; }
+.week-track   { display: flex; justify-content: space-between; gap: 3px; }
+.wt-day       { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 3px; }
+.wt-circle    { width: 34px; height: 34px; border-radius: 50%; border: 2px solid var(--border); background: var(--s2); display: flex; align-items: center; justify-content: center; font-size: 0.95rem; }
+.wt-circle.today { box-shadow: 0 0 8px var(--sage-glow); border-color: var(--sage) !important; }
+.wt-empty { font-size: 0.58rem; color: var(--dim); }
+.wt-lbl   { font-size: 0.6rem; color: var(--dim); }
+.wt-val   { font-size: 0.62rem; font-weight: 700; }
+.trend-chart { display: flex; align-items: flex-end; height: 85px; gap: 2px; }
+.trend-bar-wrap { flex: 1; display: flex; align-items: flex-end; }
+.trend-bar      { width: 100%; background: var(--sage-dim); border-radius: 2px 2px 0 0; min-height: 3px; transition: height .4s ease; }
+.trend-bar.empty { background: var(--s3); }
+.trend-bar.today { background: var(--sage); box-shadow: 0 0 6px var(--sage-glow); }
+.trend-summary   { font-size: 0.7rem; color: var(--sage); }
+.em-list  { display: flex; flex-direction: column; gap: 8px; }
+.em-item  { display: flex; gap: 10px; padding: 10px 12px; background: var(--s2); border-radius: var(--r-md); border: 1px solid var(--border); }
+.em-item-emoji  { font-size: 1.3rem; flex-shrink: 0; }
+.em-item-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 3px; }
+.em-nivel       { font-size: 0.8rem; font-weight: 600; }
+.em-item-date   { font-size: 0.7rem; color: var(--dim); }
+.em-comment     { font-size: 0.76rem; color: var(--muted); font-style: italic; line-height: 1.45; }
+@media (max-width: 900px) { .em-layout { grid-template-columns: 1fr; } .emocional-page { padding: 16px; } }

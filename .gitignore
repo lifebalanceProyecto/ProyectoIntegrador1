@@ -1,0 +1,101 @@
+# ==========================================
+# 1. ARCHIVOS GLOBALES / SISTEMA OPERATIVO
+# ==========================================
+.DS_Store
+Thumbs.db
+.directory
+*.log
+*.tmp
+
+# ==========================================
+# 2. CONFIGURACIÓN DE IDEs (IntelliJ, Eclipse, VS Code)
+# ==========================================
+.idea/
+*.iml
+.classpath
+.project
+.settings/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# ==========================================
+# 3. BACKEND (Java / Spring Boot / Maven / Gradle)
+# ==========================================
+# Compilados y empaquetados
+target/
+build/
+.gradle/
+bin/
+out/
+
+# Archivos de empaquetado directo
+*.jar
+*.war
+*.ear
+
+# Logs de Spring Boot
+logs/
+*.log.gz
+
+# ==========================================
+# 4. FRONTEND (React / Node.js / JavaScript)
+# ==========================================
+# Dependencias pesadas
+node_modules/
+jspm_packages/
+
+# Producción / Builds
+build/
+dist/
+out/
+
+# Logs de npm/yarn
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Cobertura de pruebas (Jest, etc.)
+coverage/
+
+# ==========================================
+# 5. ANALÍTICA DE DATOS (Python)
+# ==========================================
+# Entornos virtuales (¡Súper importante!)
+venv/
+.venv/
+env/
+.env_analytics/
+ENV/
+env.bak/
+venv.bak/
+
+# Caché de Python y compilados
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+
+# Archivos de datos grandes (Opcional, pero recomendado)
+# Si manejas datasets pesados en local, descomenta las siguientes líneas:
+# *.csv
+# *.xlsx
+# *.json
+# *.pickle
+# *.pkl
+
+# ==========================================
+# 6. SEGURIDAD (Variables de entorno y secretos)
+# ==========================================
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.pem
+*.key
+application-local.properties
+application-local.yml
